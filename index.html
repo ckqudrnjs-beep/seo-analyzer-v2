@@ -21,7 +21,7 @@
             --light-border: #eee;
         }
 
-        /* 🚨 Body 스크롤 강제 활성화 (Final Fix 20.0의 핵심 성공 요소 통합) */
+        /* 🚨 Body 스크롤 강제 활성화 */
         html, body {
             min-height: 100vh;
             overflow-y: auto !important; 
@@ -47,7 +47,6 @@
             text-align: center;
         }
         
-        /* 🟢 래퍼 스타일: 패딩 제거 */
         .content-wrapper {
             max-width: 800px;
             margin: 30px auto;
@@ -167,13 +166,11 @@
                 <textarea id="seoTitle" placeholder="여기에 제목을 입력하세요 (SEO의 가장 중요 요소입니다)"></textarea>
                 <p id="titleLength" style="font-size: 0.9em; text-align: right;"></p>
             </div>
-
             <div class="form-group">
                 <label for="metaDescription">💬 메타 설명 (`<meta description>`):</label>
                 <textarea id="metaDescription" placeholder="여기에 메타 설명을 입력하세요 (클릭률(CTR)에 영향을 줍니다)"></textarea>
                 <p id="descriptionLength" style="font-size: 0.9em; text-align: right;"></p>
             </div>
-
             <button id="analyzeBtn">분석 시작</button>
         </section>
 
