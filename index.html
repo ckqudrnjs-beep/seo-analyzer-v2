@@ -1,144 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="google-site-verification" content="xzkheGRMivderCUCnHm9B8_Z2FEEcHmpLd70ckO_oAA" /> 
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4425383241428989"
-     crossorigin="anonymous"></script>
-    
     <title>SEO 제목 및 메타 설명 길이 최적화 분석기</title>
-    <link rel="icon" href="/favicon.ico?v=1">
-    
-    <style>
-        :root {
-            --primary-color: #1abc9c;
-            --secondary-bg: #f5f5f5;
-            --text-color: #333;
-            --border-color: #ddd;
-            --light-border: #eee;
-        }
-
-        /* 🚨 Body 스크롤 강제 활성화 */
-        html, body {
-            min-height: 100vh;
-            overflow-y: auto !important; 
-            overflow-x: hidden;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            color: var(--text-color);
-            line-height: 1.6;
-            word-break: break-word; 
-            word-wrap: break-word; 
-            padding-bottom: 0; 
-        }
-
-        header { /* 💡 헤더 스타일 */
-            background-color: var(--primary-color);
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-        
-        .content-wrapper {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 0 20px;
-            padding-bottom: 0; 
-            margin-bottom: 0; 
-            position: relative;
-        }
-        
-        .container {
-            padding: 0; 
-            margin: 0;
-        }
-
-        /* 입력 및 버튼 스타일 */
-        textarea {
-            box-sizing: border-box;
-            width: 100%;
-            min-height: 80px;
-            padding: 10px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            resize: vertical; 
-            overflow: auto; 
-            margin-bottom: 10px;
-        }
-        .input-section { padding-bottom: 20px; }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; } 
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        #analyzeBtn {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-            width: 100%;
-            margin-top: 10px;
-        }
-        #analyzeBtn:hover {
-            background-color: #16a085;
-        }
-
-        /* 결과 섹션 스타일 */
-        .result-section { margin-top: 40px; padding-top: 20px; border-top: 1px dashed var(--border-color); }
-        .result-box {
-            padding: 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            margin-top: 10px;
-        }
-        .status-violation { color: #e74c3c; font-weight: bold; }
-        .status-compliant { color: var(--primary-color); font-weight: bold; }
-        .ad-container { width: 100%; min-height: 100px; margin: 20px 0; text-align: center; background-color: var(--secondary-bg); border: 1px dashed #ccc; display: flex; justify-content: center; align-items: center; font-size: 0.8em; color: #888; }
-        .info-section { margin-top: 40px; padding: 20px; background-color: var(--secondary-bg); border-radius: 8px; border: 1px solid var(--border-color); position: relative; z-index: 1000; }
-        .info-section h2 { color: var(--primary-color); margin-top: 0; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 2px solid var(--primary-color); }
-        .info-section dt { font-weight: bold; margin-top: 15px; padding-left: 10px; border-left: 3px solid var(--primary-color); }
-        .info-section dd { margin-left: 0; padding: 5px 0 10px 10px; border-bottom: 1px dotted var(--light-border); }
-        .safety-spacer {
-            height: 300px; 
-            width: 100%;
-            clear: both; 
-            background-color: transparent;
-        }
-        .content-footer-area {
-            position: relative; 
-            margin: 0 auto; 
-            width: 100%;
-            max-width: 800px; 
-            padding: 15px 20px;
-            text-align: center;
-            background-color: var(--primary-color);
-            color: white;
-            z-index: 1; 
-            box-sizing: border-box;
-        }
-        .content-footer-area a {
-            color: white;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-    </style>
-</head>
+    </head>
 <body style="overflow-y: scroll !important; height: auto !important; min-height: 100vh !important;">
     
     <header>
@@ -185,17 +49,20 @@
             </div>
 
         <section class="info-section">
-            <h2 id="principle">🔍 제목/설명 최적화 원리</h2>
+            <h2 id="principle">🔍 제목/설명 최적화 원리 및 Google 정책</h2>
             <dl>
-                <dt>제목 길이 (Google 검색 노출):</dt>
-                <dd>최대 600~650픽셀 이내 (약 35자 내외). 이 앱은 바이트(byte) 기준 50자 내외를 권장합니다.</dd>
+                <dt>제목 길이 (Google 검색 노출 기준):</dt>
+                <dd>Google은 제목 길이를 **픽셀(Pixel)** 기준으로 측정합니다. 약 600~650픽셀을 초과하면 말줄임표(...)로 잘립니다. 한글은 영문보다 픽셀을 더 차지하므로, 이 앱은 **안전 범위인 50자 내외**를 권장하여 잘림을 방지합니다.</dd>
                 
-                <dt>메타 설명 길이:</dt>
-                <dd>최대 920픽셀 이내 (약 150~160자 내외). 이 앱은 160자 내외를 권장하며, 반드시 타겟 키워드를 포함해야 클릭률이 높아집니다.</dd>
+                <dt>메타 설명의 중요성 및 길이:</dt>
+                <dd>메타 설명은 검색 순위에 직접적인 영향을 주지 않지만, 검색 결과에서 사용자의 **클릭률(CTR)**을 결정하는 가장 중요한 요소입니다. **160자 내외**에서 타겟 키워드를 자연스럽게 포함하여 사용자가 클릭할 만한 가치를 명확히 제시해야 합니다. 길면 잘릴 수 있습니다.</dd>
+
+                <dt>E-E-A-T 원칙 및 신뢰성:</dt>
+                <dd>SEO의 최신 원칙인 E-E-A-T (경험, 전문성, 권위, 신뢰)에 따라, 단순한 도구 제공을 넘어 **정확한 정보와 근거**를 제시하는 것이 중요합니다. 이 분석 도구는 Google의 최신 지침을 기반으로 신뢰할 수 있는 정보를 제공합니다.</dd>
             </dl>
             
             <p class="disclaimer">
-                <small>면책 고지: 본 분석 결과는 SEO 최적화 참고용이며, Google 검색 순위를 보장하지 않습니다.</small>
+                <small>면책 고지: 본 분석 결과는 SEO 전문가의 권장 사항과 Google의 공개 문서를 바탕으로 제공되는 최적화 참고용 도구입니다. 본 도구의 사용이 Google 검색 순위 상승 또는 특정 성과를 보장하지 않습니다.</small>
             </p>
         </section>
 
