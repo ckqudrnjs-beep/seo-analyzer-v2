@@ -9,7 +9,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4425383241428989"
      crossorigin="anonymous"></script>
     
-    <title>SEO 콘텐츠 분석기: 경쟁사 콘텐츠 점수 분석 및 최적화 가이드</title>
+    <title>SEO 제목 및 메타 설명 길이 최적화 분석기</title>
     <link rel="icon" href="/favicon.ico?v=1">
     
     <style>
@@ -21,14 +21,13 @@
             --light-border: #eee;
         }
 
-        /* 🚨 Style 태그 내에서 HTML/BODY의 높이와 오버플로우를 강제로 설정합니다. */
+        /* 🚨 Body 스크롤 강제 활성화 (Final Fix 20.0의 핵심 성공 요소 통합) */
         html, body {
             min-height: 100vh;
-            overflow-y: auto !important; /* 스크롤 강제 활성화 */
+            overflow-y: auto !important; 
             overflow-x: hidden;
         }
         
-        /* 🚨 body 태그의 기본 스타일 */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -58,8 +57,65 @@
             position: relative;
         }
         
-        /* ... (나머지 스타일은 Final Fix 19.0과 동일) ... */
-        
+        .container {
+            padding: 0; 
+            margin: 0;
+        }
+
+        /* 입력 및 버튼 스타일 */
+        textarea {
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 80px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            resize: vertical; 
+            overflow: auto; 
+            margin-bottom: 10px;
+        }
+        .input-section { padding-bottom: 20px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        #analyzeBtn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        #analyzeBtn:hover {
+            background-color: #16a085;
+        }
+
+        /* 결과 섹션 스타일 */
+        .result-section { margin-top: 40px; padding-top: 20px; border-top: 1px dashed var(--border-color); }
+        .result-box {
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .status-violation { color: #e74c3c; font-weight: bold; }
+        .status-compliant { color: var(--primary-color); font-weight: bold; }
+        .ad-container { width: 100%; min-height: 100px; margin: 20px 0; text-align: center; background-color: var(--secondary-bg); border: 1px dashed #ccc; display: flex; justify-content: center; align-items: center; font-size: 0.8em; color: #888; }
+        .info-section { margin-top: 40px; padding: 20px; background-color: var(--secondary-bg); border-radius: 8px; border: 1px solid var(--border-color); position: relative; z-index: 1000; }
+        .info-section h2 { color: var(--primary-color); margin-top: 0; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 2px solid var(--primary-color); }
+        .info-section dt { font-weight: bold; margin-top: 15px; padding-left: 10px; border-left: 3px solid var(--primary-color); }
+        .info-section dd { margin-left: 0; padding: 5px 0 10px 10px; border-bottom: 1px dotted var(--light-border); }
+
         /* 🚨 Spacer Block 스타일 (푸터 높이 확보용 - 최종 해결 요소) */
         .safety-spacer {
             height: 300px; 
@@ -90,8 +146,8 @@
 </head>
 <body style="overflow-y: scroll !important; height: auto !important; min-height: 100vh !important;">
     <header>
-        <h1>SEO 콘텐츠 분석기</h1>
-        <p>URL을 입력하여 콘텐츠의 SEO 점수, 키워드 밀도, 가독성을 분석합니다。</p>
+        <h1>SEO 제목/설명 최적화 도구</h1>
+        <p>제목과 메타 설명의 길이, 키워드 포함 여부를 즉시 분석합니다.</p>
     </header>
 
     <div class="content-wrapper">
@@ -101,16 +157,31 @@
             </div>
 
         <section class="input-section">
-            <label for="targetUrl">분석할 URL 입력:</label>
-            <input type="text" id="targetUrl" placeholder="https://example.com/article">
+            <div class="form-group">
+                <label for="targetKeyword">🔑 타겟 키워드 (1개 입력):</label>
+                <input type="text" id="targetKeyword" placeholder="예: 근로시간 계산기">
+            </div>
+
+            <div class="form-group">
+                <label for="seoTitle">📝 제목 태그 (`<title>`):</label>
+                <textarea id="seoTitle" placeholder="여기에 제목을 입력하세요 (SEO의 가장 중요 요소입니다)"></textarea>
+                <p id="titleLength" style="font-size: 0.9em; text-align: right;"></p>
+            </div>
+
+            <div class="form-group">
+                <label for="metaDescription">💬 메타 설명 (`<meta description>`):</label>
+                <textarea id="metaDescription" placeholder="여기에 메타 설명을 입력하세요 (클릭률(CTR)에 영향을 줍니다)"></textarea>
+                <p id="descriptionLength" style="font-size: 0.9em; text-align: right;"></p>
+            </div>
+
             <button id="analyzeBtn">분석 시작</button>
         </section>
 
         <section class="result-section">
             <h2>📊 분석 결과 요약</h2>
-            <div id="summary">
-                <p>SEO 점수: <strong id="seoScore">N/A</strong></p>
-                <p>가독성: <strong id="readability">N/A</strong></p>
+            <div class="result-box">
+                <p>제목 최적화: <strong id="titleResult">N/A</strong></p>
+                <p>설명 최적화: <strong id="descResult">N/A</strong></p>
             </div>
         </section>
         
@@ -118,22 +189,17 @@
             </div>
 
         <section class="info-section">
-            <h2 id="principle">🔍 SEO 콘텐츠 점수 측정 원리</h2>
-            <p>
-                이 분석기는 웹페이지의 HTML 구조, 키워드 빈도, 제목 태그 사용, 이미지 대체 텍스트(alt text) 등을 종합적으로 평가하여 콘텐츠의 검색 엔진 친화도를 점수로 변환합니다. **점수가 높을수록 Google 검색 결과 상위에 노출될 확률이 높습니다.**
-            </p>
-            
-            <h2 id="faq">💡 최적화 팁 및 FAQ</h2>
+            <h2 id="principle">🔍 제목/설명 최적화 원리</h2>
             <dl>
-                <dt>Q: SEO 점수를 즉시 올리려면 어떻게 해야 하나요?</dt>
-                <dd>A: 콘텐츠 제목 태그(`<title>`)에 **핵심 키워드**를 포함하고, 본문에 관련 롱테일 키워드를 자연스럽게 분산하여 사용하십시오. 내부 링크를 사용하여 도메인 권위를 분산시키는 것도 중요합니다。</dd>
+                <dt>제목 길이 (Google 검색 노출):</dt>
+                <dd>최대 600~650픽셀 이내 (약 35자 내외). 이 앱은 바이트(byte) 기준 50자 내외를 권장합니다.</dd>
                 
-                <dt>Q: 메타 설명(Meta Description)도 중요한가요?</dt>
-                <dd>A: 메타 설명은 직접적인 순위 요소는 아니지만, **검색 결과 클릭률(CTR)을 높이는 핵심 요소**입니다. 매력적인 문구로 작성하여 클릭을 유도해야 합니다。</dd>
+                <dt>메타 설명 길이:</dt>
+                <dd>최대 920픽셀 이내 (약 150~160자 내외). 이 앱은 160자 내외를 권장하며, 반드시 타겟 키워드를 포함해야 클릭률이 높아집니다.</dd>
             </dl>
             
             <p class="disclaimer">
-                <small>면책 고지: 본 분석 결과는 SEO 진단 참고용이며, Google 검색 순위를 보장하지 않습니다.</small>
+                <small>면책 고지: 본 분석 결과는 SEO 최적화 참고용이며, Google 검색 순위를 보장하지 않습니다.</small>
             </p>
         </section>
 
@@ -151,6 +217,6 @@
     </main>
     </div> <div class="safety-spacer"></div>
 
-    <script src="script.js?v=20251215"></script>
+    <script src="script.js?v=20251216"></script>
 </body>
 </html>
