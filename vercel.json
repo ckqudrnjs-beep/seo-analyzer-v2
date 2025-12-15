@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/assets/sitemap.xml"
+    },
+    {
+      "source": "/sitemap_core.xml",
+      "destination": "/assets/sitemap_core.xml"
+    }
+  ]
+}
