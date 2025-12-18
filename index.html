@@ -7,15 +7,14 @@
     <meta name="google-site-verification" content="xzkheGRMivderCUCnHm9B8_Z2FEEcHmpLd70ckO_oAA" /> 
     
     <link rel="alternate" hreflang="ko" href="https://beekayutil.com/" />
+    <link rel="canonical" href="https://beekayutil.com/" />
     
     <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-<link rel="preconnect" href="https://fundingchoicesmessages.google.com">
-<script defer 
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4425383241428989"
-        crossorigin="anonymous">
-</script>
-    
-  
+    <link rel="preconnect" href="https://fundingchoicesmessages.google.com">
+    <script defer 
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4425383241428989"
+            crossorigin="anonymous">
+    </script>
     
     <title>웹사이트 SEO 분석기: 사이트 성능, 모바일 최적화 및 SEO 점수 진단</title>
     <link rel="icon" href="/favicon.ico?v=1">
@@ -28,6 +27,7 @@
             --light-border: #eee;
             --success-color: #2ecc71;
             --error-color: #e74c3c;
+            --warning-color: #f1c40f;
         }
 
         body {
@@ -62,7 +62,6 @@
             margin: 0;
         }
 
-        /* 입력 및 버튼 스타일 */
         .input-section { margin-bottom: 30px; }
         .form-group { margin-bottom: 15px; }
         
@@ -91,7 +90,6 @@
             background-color: #2980b9;
         }
 
-        /* 결과 섹션 스타일 */
         .result-section { margin-top: 40px; }
         .result-section h2 { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); padding-bottom: 5px; margin-bottom: 20px; }
         .score-box { 
@@ -108,9 +106,8 @@
         .status-icon { font-size: 1.2em; font-weight: bold; }
         .pass { color: var(--success-color); }
         .fail { color: var(--error-color); }
-        .warning { color: #f1c40f; }
+        .warning { color: var(--warning-color); }
 
-        /* AdSense 광고 컨테이너 스타일 */
         .ad-container {
             width: 100%;
             min-height: 100px; 
@@ -125,7 +122,6 @@
             color: #888;
         }
 
-        /* SEO 정보 섹션 (Info-Section) 개선 - E-E-A-T 보강된 스타일 */
         .info-section {
             margin-top: 40px;
             padding: 20px; 
@@ -141,7 +137,6 @@
         .info-section dd { margin-left: 0; padding: 5px 0 10px 10px; border-bottom: 1px dotted var(--light-border); }
         .disclaimer small { font-size: 0.8em; color: #777; }
 
-        /* Footer 역할을 하는 div 스타일 */
         .content-footer-area {
             margin: 0 auto;
             width: 100%;
@@ -158,6 +153,12 @@
             color: white;
             text-decoration: none;
             margin: 0 5px;
+        }
+        .footer-legal {
+            margin-top: 10px;
+            padding-top: 5px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -218,29 +219,23 @@
         <section class="info-section">
             <h2 id="principle">💡 SEO 점수 분석 원리 (E-E-A-T 관점)</h2>
             <p>
-                저희 SEO 분석기는 Google의 핵심 평가 기준인 E-E-A-T (경험, 전문성, 권위, 신뢰) 원칙에 기반하여 귀하의 웹사이트를 진단합니다. 이는 단순히 기술적 오류를 넘어, 콘텐츠의 품질과 사용자 경험을 종합적으로 평가합니다.
+                저희 SEO 분석기는 Google의 핵심 평가 기준인 E-E-A-T 원칙에 기반하여 귀하의 웹사이트를 진단합니다.
             </p>
             
             <h2 id="faq">🛠️ 핵심 진단 항목 상세 설명</h2>
             <dl>
-                <dt>타이틀/메타 설명 (Title/Meta Description)</dt>
-                <dd>페이지의 첫인상이자 Google이 콘텐츠를 이해하는 핵심 요소입니다. 분석기는 키워드 포함 여부와 글자수 제한 준수 여부를 확인하여 클릭률(CTR) 개선점을 제시합니다.</dd>
-                
-                <dt>H 태그 구조 (Heading Tags)</dt>
-                <dd>H1, H2, H3 등의 제목 태그가 논리적인 계층 구조를 이루는지 검토합니다. 이는 검색 엔진이 콘텐츠의 중요도와 흐름을 파악하는 데 필수적인 요소입니다.</dd>
-
-                <dt>이미지 최적화 (Alt Tag & File Size)</dt>
-                <dd>모든 이미지에 대체 텍스트(Alt Tag)가 포함되었는지 확인하여 시각 장애인을 위한 접근성과 이미지 검색 순위를 높입니다. 또한, 로딩 속도 개선을 위해 이미지 크기를 점검합니다.</dd>
-
-                <dt>모바일 반응성 (Responsiveness)</dt>
-                <dd>Google은 모바일 친화적인 페이지를 선호합니다. 분석기는 뷰포트 설정 등 모바일 환경에서 페이지가 올바르게 표시되는지 확인합니다.</dd>
-
-                <dt>페이지 속도 (Page Speed & Core Web Vitals)</dt>
-                <dd>사용자 경험을 결정하는 핵심 요소입니다. 페이지 로딩 속도를 진단하며, 특히 Google의 핵심 웹 바이탈(Core Web Vitals) 기준 충족 여부를 간접적으로 평가합니다.</dd>
+                <dt>타이틀/메타 설명</dt>
+                <dd>페이지의 첫인상이자 Google이 콘텐츠를 이해하는 핵심 요소입니다.</dd>
+                <dt>H 태그 구조</dt>
+                <dd>제목 태그가 논리적인 계층 구조를 이루는지 검토합니다.</dd>
+                <dt>이미지 최적화</dt>
+                <dd>대체 텍스트(Alt Tag) 포함 여부와 로딩 속도를 점검합니다.</dd>
+                <dt>모바일 반응성</dt>
+                <dd>모바일 환경에서 페이지가 올바르게 표시되는지 확인합니다.</dd>
             </dl>
             
             <p class="disclaimer">
-                <small>면책 고지: 이 분석 결과는 제안일 뿐이며, 실제 Google 순위를 보장하지 않습니다. 전문적인 SEO 전략 수립에는 컨설턴트와의 상담이 필요합니다.</small>
+                <small>면책 고지: 이 분석 결과는 제안일 뿐이며, 실제 Google 순위를 보장하지 않습니다.</small>
             </p>
         </section>
 
@@ -258,8 +253,13 @@
         
         <div class="content-footer-area">
             <p>&copy; 2024 beekayutil.com</p>
-            <p>
-                <a href="https://beekayutil.com" target="_blank">SEO 분석기</a> | 
+            <div class="footer-legal">
+                <a href="/privacy">개인정보처리방침</a> | 
+                <a href="/terms">이용 약관</a> | 
+                <a href="/contact">문의</a>
+            </div>
+            <p style="margin-top:10px;">
+                <a href="https://beekayutil.com">SEO 분석기</a> | 
                 <a href="https://base64.beekayutil.com" target="_blank">Base64 변환기</a> | 
                 <a href="https://json.beekayutil.com" target="_blank">JSON 변환기</a> |
                 <a href="https://compound.beekayutil.com" target="_blank">복리 계산기</a> |
@@ -280,15 +280,13 @@
             const scoreMessageDiv = document.getElementById('scoreMessage');
 
             if (!url || !url.startsWith('http')) {
-                alert('유효한 웹사이트 URL을 입력해 주세요 (http:// 또는 https:// 포함).');
+                alert('유효한 웹사이트 URL을 입력해 주세요.');
                 return;
             }
 
-            // 분석 결과를 시뮬레이션하고 표시
             resultsDiv.style.display = 'block';
             detailsList.innerHTML = '';
 
-            // 가상 분석 항목 및 결과 (실제 분석 API는 서버 필요)
             const analysisItems = [
                 { name: "타이틀 태그 존재", status: "pass", score: 15 },
                 { name: "메타 설명 길이", status: "warning", score: 5 },
@@ -301,7 +299,7 @@
             ];
 
             let totalScore = 0;
-            let totalMaxScore = 80; // 100점 만점을 위해 조정 가능
+            let totalMaxScore = 80;
 
             analysisItems.forEach(item => {
                 const li = document.createElement('li');
@@ -311,21 +309,15 @@
 
                 switch (item.status) {
                     case 'pass':
-                        icon = '✅';
-                        statusText = '양호';
-                        colorClass = 'pass';
+                        icon = '✅'; statusText = '양호'; colorClass = 'pass';
                         totalScore += item.score;
                         break;
                     case 'fail':
-                        icon = '❌';
-                        statusText = '오류';
-                        colorClass = 'fail';
+                        icon = '❌'; statusText = '오류'; colorClass = 'fail';
                         break;
                     case 'warning':
-                        icon = '⚠️';
-                        statusText = '개선 필요';
-                        colorClass = 'warning';
-                        totalScore += item.score; // 경고는 부분 점수 부여
+                        icon = '⚠️'; statusText = '개선 필요'; colorClass = 'warning';
+                        totalScore += item.score;
                         break;
                 }
 
@@ -336,22 +328,22 @@
                 detailsList.appendChild(li);
             });
 
-            // 최종 점수 계산 (예시에서는 100점 만점으로 시뮬레이션)
             const simulatedScore = Math.min(100, Math.round((totalScore / totalMaxScore) * 100));
-            
-            seoScoreDiv.textContent = `${simulatedScore}점`;
-            seoScoreDiv.style.color = simulatedScore >= 80 ? var_success_color : simulatedScore >= 50 ? var_warning_color : var_error_color;
+            seoScoreDiv.textContent = simulatedScore + "점";
 
-            if (simulatedScore >= 90) {
+            // 스타일 시트에서 정의한 색상 변수를 안전하게 가져와 적용
+            const rootStyle = getComputedStyle(document.documentElement);
+            if (simulatedScore >= 80) {
+                seoScoreDiv.style.color = rootStyle.getPropertyValue('--success-color');
                 scoreMessageDiv.textContent = '👏 SEO 상태가 매우 좋습니다. 꾸준히 관리하세요!';
-            } else if (simulatedScore >= 70) {
-                scoreMessageDiv.textContent = '👍 좋은 점수입니다. 노란색 경고 항목을 개선하면 최상위권 진입이 가능합니다.';
+            } else if (simulatedScore >= 50) {
+                seoScoreDiv.style.color = rootStyle.getPropertyValue('--warning-color');
+                scoreMessageDiv.textContent = '👍 좋은 점수입니다. 경고 항목을 개선해 보세요.';
             } else {
-                scoreMessageDiv.textContent = '🚨 SEO 개선이 시급합니다. 붉은색 오류 항목부터 즉시 수정하세요!';
+                seoScoreDiv.style.color = rootStyle.getPropertyValue('--error-color');
+                scoreMessageDiv.textContent = '🚨 SEO 개선이 시급합니다. 오류 항목부터 수정하세요!';
             }
         }
     </script>
 </body>
 </html>
-
-
